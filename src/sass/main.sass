@@ -51,6 +51,12 @@ nav
         width: 50%
         display: flex
         justify-content: flex-end
+        gap: 10px
+        align-items: center
+        i
+            color: white
+            font-size: 20px
+            cursor: pointer
         button
             background-color: white
             color: rgb(120, 70, 209)
@@ -67,7 +73,7 @@ header
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    height: 700px
+    height: 800px
     display: flex
     justify-content: center
     align-items: center
@@ -82,10 +88,11 @@ header
         width: 100%
         height: 100%
         background-image: linear-gradient(rgba(120, 70, 209,0.5), rgba(255, 255, 255, 1))
+        backdrop-filter: blur(5px)
     video
         z-index: 0
         position: absolute
-        top: -100px
+        top: 40px
         left: 0
         width: 100%
     div
@@ -129,12 +136,16 @@ header
         align-items: center
         width: 60%
         gap: 50px
+        border-radius: 10px
+        background-color: rgb(246, 240, 255)
+        padding : 10px
         > div:first-of-type
             width: 50%
             display: flex
             align-items: center
             justify-content: flex-start
             img
+                border-radius: 10px
                 width: 100%
         > div:last-of-type
             width: 50%
@@ -155,12 +166,12 @@ header
     padding-bottom: 100px
     >div:first-of-type
         margin-bottom: 50px
-        border-bottom: 5px solid rgb(121, 70, 209)
+        // border-bottom: 5px solid rgb(121, 70, 209)
         width: 200px
         text-align: center
         border-radius: 5px
         h1
-            color: black
+            color: rgb(120, 70, 209)
 
     >div:last-of-type
         width: 60%
@@ -198,6 +209,7 @@ header
             border-radius: 10px
             width: 100%
             gap: 50px
+            padding-right: 40px
             border-right: 10px solid rgb(121, 70, 209)
             div:last-of-type
                 img
@@ -218,6 +230,7 @@ header
             border-radius: 10px
             width: 100%
             gap: 50px
+            padding-left: 30px
             border-left: 10px solid rgb(107, 84, 238)
             div:first-of-type
                 img
@@ -231,13 +244,42 @@ header
                 wid
                 h4
                     font-size: 20px
+#cta
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-top: 50px
+    padding-bottom: 50px
+    margin-top: 50px
+    background-color: rgb(120, 70, 209)
+    color: white
+    text-align: center
+    h4
+        color: rgba(255, 255, 255, 0.5)
+    button
+        margin-top: 20px
+        background-color: white
+        color: rgb(120, 70, 209)
+        padding: 5px 25px
+        padding-bottom: 8px
+        border-radius: 10px
+        transition: 0.3s ease
+        font-size: 20px
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: bold
+    button:hover
+        background-color: rgb(244, 238, 255)
+
 footer
     display: flex
     justify-content: center
     align-items: center
-    height: 50px
+    height: 100px
     background-color: white
-    border-top: 1px solid rgba(130, 54, 140, 0.25)
     p
         margin: 0
         color: black
