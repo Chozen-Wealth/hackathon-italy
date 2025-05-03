@@ -22407,20 +22407,20 @@ header video {
   left: 0;
   width: 100%;
 }
-header div {
-  margin-top: 50px;
+header div:last-of-type {
+  margin-top: 180px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   z-index: 2;
 }
-header div h1 {
+header div:last-of-type h1 {
   color: white;
   font-size: 40px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-header div button {
+header div:last-of-type button {
   margin-top: 20px;
   background-color: rgb(120, 70, 209);
   color: rgb(255, 255, 255);
@@ -22434,7 +22434,7 @@ header div button {
   justify-content: center;
   align-items: center;
 }
-header div button:hover {
+header div:last-of-type button:hover {
   background-color: rgb(153, 94, 255);
   color: white;
 }
