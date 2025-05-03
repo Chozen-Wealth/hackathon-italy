@@ -22415,10 +22415,16 @@ header div:last-of-type {
   align-items: center;
   z-index: 2;
 }
+header div:last-of-type img {
+  height: 200px;
+}
 header div:last-of-type h1 {
   color: white;
-  font-size: 40px;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  font-size: 50px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+header div:last-of-type h1 span {
+  color: rgb(120, 70, 209);
 }
 header div:last-of-type button {
   margin-top: 20px;
