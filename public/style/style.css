@@ -22365,6 +22365,9 @@ nav div:last-of-type i {
   font-size: 20px;
   cursor: pointer;
 }
+nav div:last-of-type a {
+  text-decoration: none;
+}
 nav div:last-of-type button {
   background-color: white;
   color: rgb(120, 70, 209);
@@ -22430,15 +22433,18 @@ header div:last-of-type button {
   margin-top: 20px;
   background-color: rgb(120, 70, 209);
   color: rgb(255, 255, 255);
-  padding: 5px 25px;
-  padding-bottom: 8px;
+  padding: 10px 40px;
+  padding-bottom: 13px;
   border-radius: 10px;
   transition: 0.3s ease;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header div:last-of-type a {
+  text-decoration: none;
 }
 header div:last-of-type button:hover {
   background-color: rgb(153, 94, 255);
@@ -22608,7 +22614,9 @@ header div:last-of-type button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+}
+#cta a {
+  text-decoration: none;
 }
 #cta button:hover {
   background-color: rgb(244, 238, 255);
