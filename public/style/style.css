@@ -22321,51 +22321,309 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 100px;
-  border-bottom: 5px solid rgb(130, 54, 140);
+  padding-left: 1%;
+  padding-right: 1%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(120, 70, 209);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  margin-bottom: -50px;
 }
-nav h1 {
-  font-weight: bolder;
+nav div:first-of-type {
+  display: flex;
+  width: 50%;
+  gap: 25px;
 }
-nav h1 span {
-  color: rgb(130, 54, 140);
+nav div:first-of-type img {
+  height: 30px;
 }
-nav ul {
+nav div:first-of-type ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 0;
+  padding: 0;
   list-style: none;
-  width: 50%;
+  gap: 15px;
+  font-size: 14px;
 }
-nav ul li a {
+nav div:first-of-type ul li a {
   text-decoration: none;
-  color: black;
-}
-nav div {
-  display: flex;
-  gap: 10px;
-}
-nav div button {
-  background-color: rgb(130, 54, 140);
   color: white;
+}
+nav div:last-of-type {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+nav div:last-of-type i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+nav div:last-of-type button {
+  background-color: white;
+  color: rgb(120, 70, 209);
   border: none;
-  padding: 10px 25px;
+  padding: 5px 25px;
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+nav div:last-of-type button:hover {
+  background-color: rgb(244, 238, 255);
+  color: rgb(120, 70, 209);
 }
 
 header {
-  background-color: lightgray;
-  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  position: relative;
+  overflow: hidden;
+}
+header .fond {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(120, 70, 209, 0.5), rgb(255, 255, 255));
+  backdrop-filter: blur(5px);
+}
+header video {
+  z-index: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+}
+header div:last-of-type {
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+header div:last-of-type img {
+  height: 200px;
+}
+header div:last-of-type h1 {
+  color: white;
+  font-size: 50px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+header div:last-of-type h1 span {
+  color: rgb(120, 70, 209);
+}
+header div:last-of-type button {
+  margin-top: 20px;
+  background-color: rgb(120, 70, 209);
+  color: rgb(255, 255, 255);
+  padding: 5px 25px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-size: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header div:last-of-type button:hover {
+  background-color: rgb(153, 94, 255);
+  color: white;
+}
+
+#about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#about > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 50px;
+  border-radius: 10px;
+  background-color: rgb(246, 240, 255);
+  padding: 10px;
+}
+#about > div > div:first-of-type {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#about > div > div:first-of-type img {
+  border-radius: 10px;
+  width: 100%;
+}
+#about > div > div:last-of-type {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+#about > div > div:last-of-type h1 {
+  color: rgb(121, 70, 209);
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#features > div:first-of-type {
+  margin-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+#features > div:first-of-type h1 {
+  color: rgb(120, 70, 209);
+}
+#features > div:last-of-type {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 100px;
+}
+#features > div:last-of-type > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  border-radius: 10px;
+  width: 100%;
+  gap: 50px;
+  border-left: 10px solid rgb(52, 53, 206);
+}
+#features > div:last-of-type > div:first-of-type div:first-of-type img {
+  width: 350px;
+  border-radius: 10px;
+}
+#features > div:last-of-type > div:first-of-type div:last-of-type {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#features > div:last-of-type > div:first-of-type div:last-of-type h4 {
+  font-size: 20px;
+}
+#features > div:last-of-type > div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  border-radius: 10px;
+  width: 100%;
+  gap: 50px;
+  padding-right: 40px;
+  border-right: 10px solid rgb(121, 70, 209);
+}
+#features > div:last-of-type > div:nth-of-type(2) div:last-of-type img {
+  height: 300px;
+  border-radius: 10px;
+}
+#features > div:last-of-type > div:nth-of-type(2) div:first-of-type {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+}
+#features > div:last-of-type > div:nth-of-type(2) div:first-of-type h4 {
+  font-size: 20px;
+}
+#features > div:last-of-type > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  border-radius: 10px;
+  width: 100%;
+  gap: 50px;
+  padding-left: 30px;
+  border-left: 10px solid rgb(107, 84, 238);
+}
+#features > div:last-of-type > div:last-of-type div:first-of-type img {
+  height: 300px;
+  border-radius: 0px 10px 10px 0px;
+}
+#features > div:last-of-type > div:last-of-type div:last-of-type {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#features > div:last-of-type > div:last-of-type div:last-of-type h4 {
+  font-size: 20px;
+}
+
+#cta {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-header div {
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-top: 50px;
+  background-color: rgb(120, 70, 209);
+  color: white;
+  text-align: center;
+}
+#cta h4 {
+  color: rgba(255, 255, 255, 0.5);
+}
+#cta button {
+  margin-top: 20px;
+  background-color: white;
+  color: rgb(120, 70, 209);
+  padding: 5px 25px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-size: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+#cta button:hover {
+  background-color: rgb(244, 238, 255);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+}
+footer p {
+  margin: 0;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
