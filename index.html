@@ -1,39 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/style/style.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>TechLab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLab</title>
+  <link rel="stylesheet" href="./public/style/style.css" />
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 <body>
 
-    <nav>
-        <h1>TECH<span>LAB</span></h1>
-        <ul>
-            <li><a href="">About us</a></li>
-            <li><a href="">Features</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <div>
-            <button>Register</button>
-            <button>Login</button>
-        </div>
-    </nav>
-    <header>
-        <h2>Build, Join & Create</h2>
-        <h1>Joins US</h1>
-        <div>
-            <button>Create a project</button>
-            <button>Join a project</button>
-        </div>
-    </header>
-    <main></main>
-    <footer></footer>
+  <!-- Navigation -->
+  <nav class="d-flex justify-content-between align-items-center p-3 bg-dark text-white">
+    <h1>TECH<span style="color: #0dcaf0;">LAB</span></h1>
+    <ul class="nav">
+      <li class="nav-item"><a href="#" class="nav-link text-white">About us</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-white">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-white">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-white">Contact</a></li>
+      <li class="nav-item"><a href="./public/pages/projets.html" class="btn btn-outline-light ms-2">Voir les projets</a></li>
+    </ul>
+    <div>
+      <button class="btn btn-outline-light me-2">Register</button>
+      <button class="btn btn-primary">Login</button>
+    </div>
+  </nav>
 
-    <script src="./public/js/main.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Header -->
+  <header class="text-center p-5 bg-light">
+    <h2>Build, Join & Create</h2>
+    <h1>Join Us</h1>
+    <div class="mt-3">
+      <button class="btn btn-success me-2">Create a project</button>
+      <button class="btn btn-outline-success">Join a project</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+
+    <!-- Utilisateurs recommandés -->
+    <section class="recommended-users mb-5">
+      <h2>Utilisateurs Recommandés</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Yassine M.</h5>
+            <p>Projet : App santé IA</p>
+            <p>Expérience : Python, Django, UI/UX</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Sarah B.</h5>
+            <p>Projet : Plateforme e-learning</p>
+            <p>Expérience : HTML, CSS, WebDesign</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Ali T.</h5>
+            <p>Projet : Dashboard Data</p>
+            <p>Expérience : React, Node.js, MongoDB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathon -->
+    <section class="hackathon-section mb-5">
+      <h2>Hackathon en ligne</h2>
+      <div class="card p-3">
+        <h4>Hackathon Printemps 2025</h4>
+        <p>Thème : Développement durable & web</p>
+        <p>Participez avec une équipe ou seul !</p>
+        <button class="btn btn-warning">Participer</button>
+      </div>
+    </section>
+
+    <!-- Kanban -->
+    <section class="kanban-section mb-5">
+      <h2>Tableau Kanban</h2>
+      <div class="row text-center">
+        <div class="col-md-4 bg-light p-3">
+          <h5>À faire</h5>
+          <div class="border p-2 my-1">Créer les wireframes</div>
+          <div class="border p-2 my-1">Choisir le nom du projet</div>
+        </div>
+        <div class="col-md-4 bg-warning p-3">
+          <h5>En cours</h5>
+          <div class="border p-2 my-1">Maquette Figma</div>
+        </div>
+        <div class="col-md-4 bg-success p-3 text-white">
+          <h5>Terminé</h5>
+          <div class="border p-2 my-1 bg-white text-dark">Brief client</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funding -->
+    <section class="funding-section mb-5">
+      <h2>Funding de projet</h2>
+      <div class="card p-3">
+        <h5>Projet "TechLab Tools"</h5>
+        <div class="progress my-2">
+          <div class="progress-bar bg-info" style="width: 70%;">70%</div>
+        </div>
+        <p>Objectif : 1000€ - Atteint : 700€</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4">
+    <p>&copy; 2025 TechLab. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Scripts (non utilisés ici mais chargés) -->
+  <script src="./public/js/main.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

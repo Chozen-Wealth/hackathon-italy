@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #f3e9fb 0%, #ffffff 30%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: white;
+    color: #6C3FB6;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  nav h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  nav h1 span {
+    color: #6C3FB6;
+  }
+  
+  nav .btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 2px solid #6C3FB6;
+    color: #6C3FB6;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  nav .btn:hover {
+    background-color: #6C3FB6;
+    color: white;
+  }
+  
+  aside {
+    background-color: #fdfcfe;
+    border-right: 1px solid #e2d6f3;
+  }
+  
+  main h2 {
+    color: #6C3FB6;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  /* Cartes projet */
+  section .row {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  section .row:hover {
+    transform: translateY(-5px);
+  }
+  
+  section img {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  
+  /* Modal stylée */
+  .modal-content {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+  }
+  
+  /* Champs de formulaire dans la modale */
+  .modal .form-control {
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Bouton de soumission modale */
+  .modal .btn-primary {
+    background-color: #6C3FB6;
+    border-color: #6C3FB6;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .modal .btn-primary:hover {
+    background-color: #5b32a3;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-img-top {
+    max-height: 180px;
+    object-fit: cover;
+  }
+  .card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
