@@ -12,124 +12,78 @@
     <!-- NAVBAR -->
     <nav class="d-flex justify-content-between align-items-center p-3">
       <div>
-        <h1 class="m-0">TECH<span>LAB</span></h1>
+        <img src="../assets/images/logo.png" alt="">
+        <a href="../../index.html">return</a>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link btn btn-outline-primary ms-2" href="/index.html">Retour à l'accueil</a>
-        </li>
-      </ul>
       <div>
-        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#authModal">Register</button>
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-user"></i>
       </div>
     </nav>
 
-    <!-- MODALE Login/Register -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content shadow-lg border-0">
-          <div class="modal-header bg-light border-bottom-0">
-            <h5 class="modal-title text-primary" id="authModalLabel">Connexion / Inscription</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Adresse email</label>
-                <input type="email" class="form-control" id="email" placeholder="ex: toi@email.com" required />
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="password" placeholder="Mot de passe" required />
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Continuer</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="modal fade" id="createProjectModal" tabindex="-1" aria-labelledby="createProjectModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content shadow-lg border-0">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title text-primary" id="createProjectModalLabel">Create a new project</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container" id="creationProjet">
-              <div class="form-group">
-                <label for="project-title">Project Title</label>
-                <input type="text" id="project-title" placeholder="Enter your project name" />
+    <div id="fondBoxCreate">
+      <div id="BoxCreate">
+        <div id="BoxCreateTitre">
+          <h5>Create a new project</h5>
+          <i id="BoxCreateClose" class="fa-solid fa-xmark"></i>
+        </div>
+        <div id="BoxCreateBody">
+          <label for="project-title">Project Title</label>
+          <input type="text" id="project-title" placeholder="Enter your project name" />
+          <label for="project-description">Project Description</label>
+          <textarea id="project-description" placeholder="Describe your project..."></textarea>
+          <label for="fileInput" id="DragAndDropZone">Drag & drop images here or click to browse</label>
+          <input type="file" id="fileInput" multiple accept="image/*" hidden/>
+          <div class="image-preview" id="imagePreview"></div>
+          <div class="options">
+            <div class="option-box">
+              <h3>People Needed</h3>
+              <div class="people-types" id="peopleTypes"></div>
+              <button class="add-type-btn" id="addTypeBtn">+ Add Role</button>
+            </div>
+            <div class="option-box">
+              <h3>Funding</h3>
+              <div class="checkbox-option">
+                <input type="checkbox" id="needs-funding" />
+                <label for="needs-funding">This project needs funding</label>
               </div>
-              <div class="form-group">
-                <label for="project-description">Project Description</label>
-                <textarea id="project-description" placeholder="Describe your project..."></textarea>
-                <div class="drop-area" id="dropArea">
-                  <p>Drag & drop images here or click to browse</p>
-                  <input type="file" id="fileInput" accept="image/*" multiple style="display: none" />
+              <div id="funding-details" style="display: none">
+                <div class="form-group">
+                  <label>Amount needed ($):</label>
+                  <input type="number" min="0" value="0" />
                 </div>
-                <div class="image-preview" id="imagePreview"></div>
-              </div>
-              <div class="options">
-                <div class="option-box">
-                  <h3>People Needed</h3>
-                  <div class="people-types" id="peopleTypes"></div>
-                  <button class="add-type-btn" id="addTypeBtn">+ Add Role</button>
-                </div>
-                <div class="option-box">
-                  <h3>Funding</h3>
-                  <div class="checkbox-option">
-                    <input type="checkbox" id="needs-funding" />
-                    <label for="needs-funding">This project needs funding</label>
-                  </div>
-                  <div id="funding-details" style="display: none">
-                    <div class="form-group">
-                      <label>Amount needed ($):</label>
-                      <input type="number" min="0" value="0" />
-                    </div>
-                    <div class="checkbox-option">
-                      <input type="checkbox" id="is-paid" />
-                      <label for="is-paid">This is a paid opportunity</label>
-                    </div>
-                  </div>
+                <div class="checkbox-option">
+                  <input type="checkbox" id="is-paid" />
+                  <label for="is-paid">This is a paid opportunity</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div id="divBtnCreate">
+          <button id="btnCreateForm">Create</button>
+        </div>
       </div>
     </div>
 
     <!-- SIDEBAR + MAIN -->
-    <div class="d-flex">
+    <div id="sidebar" class="d-flex">
       <aside class="bg-light p-3" style="width: 250px">
-        <h4>Filtres</h4>
         <ul class="list-unstyled">
-          <li><a href="#">Projets</a></li>
+          <li class="active"><a href="#">Projects</a></li>
           <li><a href="#">Hackathons</a></li>
-          <li><a href="#">Type de projet</a></li>
-          <li><a href="#">Langages utilisés</a></li>
+          <li><a href="#">Skills</a></li>
         </ul>
-        <input type="text" class="form-control" placeholder="Rechercher..." />
-        <hr />
-        <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#createProjectModal">➕ Créer un projet</button>
-        <button class="btn btn-outline-secondary w-100">📁 Mes projets</button>
+        <hr/>
+        <button class="btnCreate" data-bs-toggle="modal" data-bs-target="#createProjectModal"><span>+</span> Create Project</button>
+        <button class="btn btn-outline-secondary w-100 btnMyProjects">My Projects</button>
       </aside>
-
       <main class="container mt-4">
-        <h2>Liste des Projets Web</h2>
-
+        <input type="text" id="searchBar" placeholder="Search..." />
         <!-- Tous les projets visibles -->
         <div class="row" id="allProjects">
           <!-- Projets existants ici -->
-        </div>
-
-        <!-- Section des projets créés par toi -->
-        <div id="myProjectsSection" class="mt-5" style="display: none">
-          <h3>Mes Projets</h3>
-          <div class="row" id="myProjects"></div>
         </div>
       </main>
     </div>
