@@ -22488,7 +22488,6 @@ header div:last-of-type button:hover {
 }
 #features > div:first-of-type {
   margin-bottom: 50px;
-  width: 200px;
   text-align: center;
   border-radius: 5px;
 }
