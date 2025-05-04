@@ -1,0 +1,69 @@
+section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  margin-inline: 1%;
+}
+section ul li {
+  padding: 5px 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+section ul li:hover {
+  background-color: #7846d1;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section ul li:first-of-type {
+  background-color: #7846d1;
+  color: white;
+}
+section > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+section > div > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3ecff;
+  width: 50%;
+}
+section > div > div:first-of-type img {
+  background-color: #7846d1;
+}
+section > div > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3ecff;
+  width: 25%;
+}
+section > div > div:last-of-type > div:not(:last-of-type) {
+  display: flex;
+  gap: 10px;
+}
+.progress-container {
+  background-color: rgb(205, 192, 229);
+  border-radius: 15px;
+  height: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.progress-container p {
+  position: absolute;
+  top: -2px;
+  text-align: center;
+  width: 100%;
+}
+.progress-bar {
+  height: 20px;
+  border-radius: 15px;
+  color: white;
+}
