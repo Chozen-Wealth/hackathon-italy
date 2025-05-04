@@ -30,7 +30,7 @@
         </div>
         <div id="BoxCreateBody">
           <label for="project-title">Project Title</label>
-          <input type="text" id="project-title" placeholder="Enter your project name" />
+          <input autocomplete="off" type="text" id="project-title" placeholder="Enter your project name" />
           <label for="project-description">Project Description</label>
           <textarea id="project-description" placeholder="Describe your project..."></textarea>
           <label for="fileInput" id="DragAndDropZone">Drag & drop images here or click to browse</label>
@@ -62,10 +62,27 @@
           </div>
         </div>
         <div id="divBtnCreate">
-          <button id="btnCreateForm">Create</button>
+          <button>Create</button>
+          <button id="btnCreateForm"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate with AI</button>
         </div>
       </div>
     </div>
+
+
+    <div id="fondJoinRequest">
+      <div id="joinRequest">
+        <p>Your request has been sent. Please wait until you get approved.</p>
+        <button class="btnRequestClose">close</button>
+      </div>
+    </div>
+
+    <div id="fondJoinAccept">
+      <div id="joinAccept">
+        <p>Your request has been approved.<br>WELCOME TO TECHLAB !</p>
+        <button class="btnAcceptClose">close</button>
+      </div>
+    </div>
+
 
     <!-- SIDEBAR + MAIN -->
     <div id="sidebar" class="d-flex">
@@ -78,6 +95,10 @@
         <hr/>
         <button class="btnCreate" data-bs-toggle="modal" data-bs-target="#createProjectModal"><span>+</span> Create Project</button>
         <button class="btn btn-outline-secondary w-100 btnMyProjects">My Projects</button>
+        <div id="myOwnProjects">
+          <span>Secret Project</span>
+          <span id="myTechLab">TechLAB</span>
+        </div>
       </aside>
 
 

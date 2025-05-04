@@ -24,11 +24,12 @@ function createProjectCard(project, i) {
             </div>
             <div class="project-actions">
                 <button>View Project</button>
-                <button>Join Project</button>
+                <button class="btnJoinProject">Join Project</button>
             </div>
         </div>
         <div class="progress-container">
             <div class="progress-bar"></div>
+            <p></p>
         </div>
     </div>
 `;
@@ -41,9 +42,10 @@ return newProject;
 let allProjects = [];
 let allProjectscontainer = document.querySelector("#allProjects");
 
-let newProject1 = new projects(1, "Anime Box", "Anime Box is inspired by letterBox, a website that shares reviews about movies and series. The goal is to make the same thing but for anime fans...", "https://anime-box.com/wp-content/uploads/2023/03/animebox-logo2.jpg", "Mathis", "../assets/images/people1.png", 10, ["Copywriting"], ["Need1"], true,10000, 10000, false);
-let newProject2 = new projects(2, "TripMates", "Description of project 2", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6XB8lydESMCEiJC8AdESTGoYqftMLPFeJnQ&s", "Author 2", "https://placehold.co/50x50", 20, ["Backend"], ["Need2"], true,1000, 500, false);
-let newProject3 = new projects(3, "Project 3", "Description of project 3", "https://placehold.co/200x200", "Author 3", "https://placehold.co/50x50", 30, ["Tag"], ["Need3"],true ,1000, 500, false);
+let newProject1 = new projects(1, "TechLab", "TechLab is the best place for people that want to find new exciting projects to work on or create their own and invite talents.", "../assets/images/techlab.jpg", "Neha", "../assets/images/neha.jpg", 0, ["Copywriting"], ["Need1"], true,10000, 0, false);
+let newProject2 = new projects(2, "TripMates", "A platform where you can meet people or look for good places to eat or do activities anywhere in the world.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6XB8lydESMCEiJC8AdESTGoYqftMLPFeJnQ&s", "Maxence", "../assets/images/maxence.jpg", 1023, ["Backend"], ["Need2"], true,20000, 20253, false);
+let newProject3 = new projects(3, "VisionVoice AudioBooks", "We are a community that create ebooks for blind and disabled people.", "../assets/images/audioBook.jpg", "Benoit", "../assets/images/benoit.jpg", 422, ["Speaker"], ["Need3"],true ,50000, 10231, false);
+let newProject4 = new projects(4, "Anime Box", "Anime Box is inspired by letterBox, a website that shares reviews about movies and series. The goal is to make the same thing but for anime fans...", "https://anime-box.com/wp-content/uploads/2023/03/animebox-logo2.jpg", "Marcus", "../assets/images/Marcus.jpg", 194, ["Copywriting"], ["Need1"], true,10000, 3789, false);
 
 let project1 = document.createElement("div");
 project1.innerHTML = createProjectCard(newProject1, 0);
@@ -62,3 +64,36 @@ project3.innerHTML = createProjectCard(newProject3, 2);
 allProjects.push(newProject3);
 allProjectscontainer.appendChild(project3);
 project3.classList.add("projet")
+
+let project4 = document.createElement("div");
+project4.innerHTML = createProjectCard(newProject4, 3);
+allProjects.push(newProject4);
+allProjectscontainer.appendChild(project4);
+project4.classList.add("projet")
+
+
+let btnJoinProject = document.querySelector(".btnJoinProject")
+let fondJoinRequest = document.querySelector("#fondJoinRequest")
+let btnRequestClose = document.querySelector(".btnRequestClose")
+
+btnJoinProject.addEventListener("click", ()=> {
+    fondJoinRequest.style.display = "flex"
+})
+
+btnRequestClose.addEventListener("click", ()=> {
+    fondJoinRequest.style.display = "none"
+    setTimeout(()=>{
+        fondJoinAccept.style.display = "flex"
+    }, 2000)
+})
+
+let fondJoinAccept = document.querySelector("#fondJoinAccept")
+let btnAcceptClose = document.querySelector(".btnAcceptClose")
+let myTechLab = document.querySelector("#myTechLab")
+
+btnAcceptClose.addEventListener("click", ()=>{
+    fondJoinAccept.style.display = "none"
+    setTimeout(()=> {
+        myTechLab.style.transform = "translateX(0px)"
+    }, 500)
+})

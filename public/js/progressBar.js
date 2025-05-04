@@ -5,7 +5,7 @@ export function setProgress(actual, needed, i) {
     percent = 100;
   }
   element.style.width = percent + "%";
-  element.textContent = `${actual}€ / ${needed} €`;
+  element.nextElementSibling.textContent = `${actual}€ / ${needed} €`;
   if (percent < 30) {
     element.style.backgroundColor = "#ff5252";
   } else if (percent < 70) {
@@ -14,3 +14,4 @@ export function setProgress(actual, needed, i) {
     element.style.backgroundColor = "#4CAF50";
   }
 }
+
