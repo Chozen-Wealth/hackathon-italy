@@ -62,9 +62,12 @@ function handleFiles(files) {
 let fondBoxCreate = document.querySelector("#fondBoxCreate")
 let btnCreate = document.querySelector(".btnCreate")
 let btnClose = document.querySelector("#BoxCreateClose")
+let projet1 = document.getElementsByClassName("projet")
 
 btnCreateForm.addEventListener("click", ()=>{
   fondBoxCreate.style.display = "none"
+  projet1[0].style.animation = "projetCreate 1.5s ease forwards"
+  projet1[0].style.display = "flex"
 })
 btnCreate.addEventListener("click", ()=>{
   fondBoxCreate.style.display = "flex"
